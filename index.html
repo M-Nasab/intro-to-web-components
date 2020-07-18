@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags Input Component</title>
+    <script src="./tags-input.js"></script>
+    <style>
+        body {
+            display: grid;
+            place-content: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            font-size: 35px;
+        }
+
+        tags-input {
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tags Input Component</h1>
+
+    <tags-input placeholder="Enter a tag"></tags-input>
+
+    <button id="submit-btn" type="submit">Submit</button>
+</body>
+<script>
+    const tagsInputElement = document.querySelector('tags-input');
+    
+    const submitButton = document.querySelector('#submit-btn');
+    submitButton.addEventListener('click', () => {
+        console.log(tagsInputElement.tags);
+    });
+</script>
+</html>
